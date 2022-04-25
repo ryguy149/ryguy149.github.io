@@ -172,7 +172,21 @@ header .highlight, header .current a{
     border: 8px solid rgb(62, 62, 62);
 }
 
+#welcome 
+{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 10px 0;
+    background: rgb(14, 108, 170);
+    color: #fff;
+    text-align: center;
+}
 
+#welcome a 
+{
+    color: #fff;
+}
 
 
 footer{
