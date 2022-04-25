@@ -112,7 +112,7 @@ header .highlight, header .current a{
 #personalInfo{
     /* appends my lacrosse photos */
     min-height: 440px;
-    background: url("PicturesForWeb/lax1.jpg") no-repeat 0 -70px;
+    background: url("../PicturesForWeb/lax1.jpg") no-repeat 0 -70px; 
     background-size: cover;
     background-position: center;
 
