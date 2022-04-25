@@ -14,14 +14,40 @@
 
     <body>
         <script type="text/javascript">
-            window._mfq = window._mfq || [];
-            (function() {
-              var mf = document.createElement("script");
-              mf.type = "text/javascript"; mf.defer = true;
-              mf.src = "//cdn.mouseflow.com/projects/cac04118-bb94-4030-927b-4bfdd62e6e27.js";
-              document.getElementsByTagName("head")[0].appendChild(mf);
-            })();
-          </script>
+            document.addEventListener("DOMContentLoaded", function () 
+            {
+            const userCookieName = "returningVisitor";
+            checkUserCookie(userCookieName);});
+
+            
+            function checkUserCookie(userCookieName) 
+            {
+                const regEx = new RegExp(userCookieName, "g");
+                const cookieExists = document.cookie.match(regEx);
+                if (cookieExists != null) 
+                    {
+                        document.body.insertAdjacentHTML(
+                        "beforeend",
+                        '<div id="welcome">Welcome back friend! Check out our latest thing <a href="#">HERE</a></div>'
+                        );
+                    } 
+                    else 
+                    {
+                        createUserCookie(userCookieName);
+                    }
+            }
+
+
+            function createUserCookie(userCookieName) 
+            {
+                const userCookieValue = "Yes";
+                const userCookieDays = 7;
+                let expiryDate = new Date();
+                expiryDate.setDate(expiryDate.getDate() + userCookieDays);
+                document.cookie = userCookieName + "=" + userCookieValue +"; expires=" + expiryDate.toGMTString() + "path=/";
+            }
+
+        </script>
 
         <header>
             <div class = "container">
