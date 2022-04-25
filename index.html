@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <!-- assign meta tags and assign a title for the web page -->
+    <head> 
+        <meta charset = "utf-8">
+        <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+        <meta name = "desctiption" content = "My personal web page to display resume, expierience, and CS projects">
+        <meta name = "keywords" content = "Ryan FLeury, Computer Science, Personal Profile">
+        <meta name = "author" content = "Ryan FLeury">
+
+        <title>Ryan Fleury Web Page | Welcome</title>
+        <link rel = "stylesheet" href = "D:\vsCode\Web Server prototype\webServer.css">
+    </head>
+
+    <body>
+        <header>
+            <div class = "container">
+                <div id = "introduction">
+                    <!-- <img src="PicturesForWeb\uniLogo.png" width="80" height="100"> -->
+                    <h1><span class="highlight">Ryan Fleury's </span> Personal Website</h1> <!--use span to ensure a new line is not created-->
+                    
+                <nav>
+                    <ul>
+                         <li class = current><a href="index.html">Home</a></li> 
+                         <li><a href="about.html">About Me</a></li> 
+                         <li><a href="myProjects.html">My Projects</a></li> 
+                         <li><a href="contact.html">Contact Me</a></li>
+                    </ul>
+                </nav> 
+              </div>   
+            </div>
+        </header>
+    
+        <!-- label for the photo that has been placed on screen -->
+        <section id = "personalInfo">
+            <div class = "container">
+                <h1>Ryan Fleury: Computer Science Major</h1> 
+                <p>This website has the purpose of showcasing my Journy at LTU and my Computer Scinece Projects.</p>
+            </div>
+        </section>
+
+   
+        <!-- my projects and an about me section within my site -->
+        <section id = "aboutMe">
+            <div class = "container"> 
+                <div class = "box">
+                    <h3>About Me</h3>
+                    <p>I am currently a senior at Lawrence Technilogical University, my expected graduation is end of summer 2022. I am also a student athlete at LTU and am one of the Captain on the Men's Larcosse team. </p>
+                </div>
+                <div class = "box">
+                    <h3>My Computer Science Projects</h3>
+                    <p>
+                        <ol>
+                            <li>Java Storefront GUI. </li>
+                            <li>C++ Vending Machine Operating System program. </li>
+                            <li>Predicting Emotion with Support Vector Machines Classifier (Python Text Mining). </li>
+                            <li>Wine Preference Prediction script with R programming.  </li>
+                            <li>Senior Project: Text editor that will predict emotion of inputted text or text document (WIP).</li>
+                            <li>This Website! </li>
+                        </ol>
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- contact me section need to integrate email functionality in this section still -->
+        <section id = "contactMe">
+            <div class= "container">
+                <img src="PicturesForWeb/headshot.jpg">
+                <h1>Contact Me </h1>
+                <p>If you would like to get in contact with me please reach out! Email is the best way to reach me, but please give me adequate time to get back with you.</p>
+                <form>
+                    <!-- <input type="email" placeholder="Enter Email">
+                    <button type="submit" class="buttone_1">Email Me!</button> -->
+                    <a class="button" href="mailto:rfleury@ltu.edu">Link to my email: rfleury@ltu.edu</a>
+                </form>
+            </div>
+        </section>
+
+        <section id = "footer">
+            <footer>
+                <p>Web Server Project 2022</p>
+            </footer>
+        </section>
+
+    </body>
+</html>

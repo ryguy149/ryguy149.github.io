@@ -1,0 +1,188 @@
+body{
+    font: 18px/1.5 Arial,Helvetica,sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(67, 169, 253);
+    
+}
+
+/*Global*/
+.container{
+    width: 70%;
+    margin: auto;
+    overflow: hidden;
+}
+
+
+ul{
+    margin: 0;
+    padding: 0;
+}
+
+
+/*Header*/
+header{
+    background: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    padding-top: 20px;
+    min-height: 100px;
+    border-bottom: rgb(255, 255, 255) 4px solid;
+
+    background-image: url("PicturesForWeb/uniLogo.png");
+    background-attachment: fixed;
+    background-position: top right;
+    background-repeat: no-repeat;
+    
+}
+
+header a{
+    color:white;
+    text-decoration: none; 
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+/* hover state for the sectoion of the site */
+header a:hover{
+    color:rgb(67, 169, 253);
+    font-weight: bold;
+}
+
+#contactMe a{
+    color:rgb(8, 27, 195);
+    font-style: normal;
+}
+
+
+
+#contactMe a:hover{
+    color:rgb(249, 250, 251);
+    font-style: italic;
+}
+
+/* highlight my name to a light blue */
+header .highlight, header .current a{
+    color:rgb(67, 169, 253);
+    font-weight: bold;
+}
+
+/* place the list item accordingly */
+header li{
+    float: left;
+    display: inline;
+    padding: 0 18px 0 18px;
+}
+
+/* set space between list items on projectsPage*/
+#projectsPage li + li {
+    margin-top: 15px;
+}
+
+#projectsPage li {
+    font-style: italic;
+    font-size: larger;
+}
+
+
+#projectsPage sub{
+    font-size: 22px;
+    font-style: normal;
+}
+
+
+header #introduction{
+    float:left;
+}
+
+header #introduction h1{
+    margin: 0;
+}
+header nav{
+    float: left;
+    margin-top: 10px;
+}
+
+/* highlights the current tab in blue */
+header .highlight, header .current a{
+    color:rgb(67, 169, 253);
+    font-weight: bold;
+}
+
+/* personal info section for me */
+#personalInfo{
+    /* appends my lacrosse photos */
+    min-height: 440px;
+    background: url("PicturesForWeb/lax1.jpg") no-repeat 0 -70px;
+    background-size: cover;
+    background-position: center;
+
+
+    text-align: center;
+    color:white;
+
+    /* ref https://stackoverflow.com/questions/4772906/css-is-it-possible-to-add-a-black-outline-around-each-character-in-text */
+    text-shadow: 2px 0 0 #000, 0 -2px 0 #000, 0 2px 0 #000, -2px 0 0 #000;
+    
+}
+
+#personalInfo h1{
+    margin-top: 180px;
+    font-size: 60px;
+    margin-bottom: 10px;
+
+}
+
+#personalInfo p{
+    font-size: 30px;
+}
+
+
+#contactMe{
+    padding-bottom: 20px;
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+    
+}
+
+
+#contactMe p{
+    font-size: 23px;
+}
+
+#contactMe img{
+    padding-top: 35px;
+    float: right;
+}
+
+
+
+#aboutMe{
+    color: white;
+    background: black;
+    font-size: 20px;
+}
+
+
+#projectsPage{
+    
+    font-size: 23px;
+
+}
+#projectsPage img{ 
+    border: 8px solid rgb(62, 62, 62);
+}
+
+
+
+
+footer{
+    padding: 10px;
+    margin-top: 5px;
+    color: white;
+    background-color: black;
+    text-align: center;
+}
+
+#main{
+    float: center;
+}
