@@ -178,7 +178,7 @@ header .highlight, header .current a{
     bottom: 0;
     width: 100%;
     padding: 10px 0;
-    background: rgb(14, 108, 170);
+    background: rgb(78, 78, 79);
     color: #fff;
     text-align: center;
 }
@@ -188,6 +188,61 @@ header .highlight, header .current a{
     color: #fff;
 }
 
+
+/* ref https://fullstackheroes.com/tutorials/javascript/cookie-policy-popup/ */
+#cookieNotice{
+    position: fixed;
+    bottom: 40px;
+    left: 10%;
+    right: 10%;
+    width: 80%;
+    padding: 5px 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #eee;
+    border-radius: 5px;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+
+}
+
+.close {
+    height: 20px;
+    background-color: #777;
+    border: none;
+    color: white;
+    border-radius: 2px;
+    cursor: pointer;
+  }
+
+/* media-breakpoint-down {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 0;
+
+    > div:first-child {
+      width: auto;
+    }
+}  */
+
+/* .cookieNotice{
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 0;
+
+     
+}*/
+/* 
+.close-cookies {
+    cursor: pointer;
+} */
+
+
+.cookie-overlay a{
+    text-decoration: underline;
+}
 
 footer{
     padding: 10px;

@@ -12,42 +12,122 @@
         <link rel = "stylesheet" type="text/css" href = "css/webServer.css">
     </head>
 
+    
+
     <body>
-        <script type="text/javascript">
-            document.addEventListener("DOMContentLoaded", function () 
-            {
-            const userCookieName = "returningVisitor";
-            checkUserCookie(userCookieName);});
+        
+        <!-- refrence: https://dev.to/michaelburrows/display-a-message-to-returning-visitors-using-a-javascript-cookie-21d7 using cookies to welcome a returning user
+        https://stackoverflow.com/questions/29796169/how-to-add-jquery-code-into-html-page-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
-            
-            function checkUserCookie(userCookieName) 
-            {
-                const regEx = new RegExp(userCookieName, "g");
-                const cookieExists = document.cookie.match(regEx);
-                if (cookieExists != null) 
-                    {
-                        document.body.insertAdjacentHTML(
-                        "beforeend",
-                        '<div id="welcome">Welcome back friend! Check out our latest thing <a href="#">HERE</a></div>'
-                        );
-                    } 
-                    else 
-                    {
-                        createUserCookie(userCookieName);
-                    }
-            }
+        <script type="text/javascript"> 
 
+           
 
-            function createUserCookie(userCookieName) 
+            // //function to make a new cookue if the one has not been made for the user.
+            function setCookie(userCookieName) 
             {
                 const userCookieValue = "Yes";
                 const userCookieDays = 7;
                 let expiryDate = new Date();
                 expiryDate.setDate(expiryDate.getDate() + userCookieDays);
-                document.cookie = userCookieName + "=" + userCookieValue +"; expires=" + expiryDate.toGMTString() + "path=/";
+                document.cookie = userCookieName + "=" + userCookieValue +"; expires=" + expiryDate.toGMTString() + "path=/"; 
             }
 
+            // Delete cookie
+            function deleteCookie(userCookieName) 
+            {
+                const userCookieDays = 7;
+                let expiryDate = new Date();
+                expiryDate.setDate(expiryDate.getDate() + userCookieDays);
+                document.cookie = userCookieName + "=;" + expiryDate.toGMTString() + ";path=/";
+            }
+
+
+            // // Create cookie
+            // function setCookie(cname, cvalue, exdays) {
+            //     const d = new Date();
+            //     d.setTime(d.getTime() + (exdays*24*60*60*1000));
+            //     let expires = "expires="+ d.toUTCString();
+            //     document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+            // }
+
+            // // Delete cookie
+            // function deleteCookie(cname) {
+            //     const d = new Date();
+            //     d.setTime(d.getTime() + (24*60*60*1000));
+            //     let expires = "expires="+ d.toUTCString();
+            //     document.cookie = cname + "=;" + expires + ";path=/";
+            // }
+
+            // Read cookie
+            function getCookie(cname) {
+                let name = cname + "=";
+                let decodedCookie = decodeURIComponent(document.cookie);
+                let ca = decodedCookie.split(';');
+                for(let i = 0; i <ca.length; i++) {
+                    let c = ca[i];
+                    while (c.charAt(0) == ' ') {
+                        c = c.substring(1);
+                    }
+                    if (c.indexOf(name) == 0) {
+                        return c.substring(name.length, c.length);
+                    }
+                }
+                return "";
+            }
+           
+            //check for retruning visitor
+            document.addEventListener("DOMContentLoaded", function () 
+            {
+            const userCookieName = "returningVisitor";
+            checkUserCookie(userCookieName);});
+
+            //will welcome the user back if they have been to the website before.
+            function checkUserCookie(userCookieName) 
+            {
+                const regEx = new RegExp(userCookieName, "g");  //g (global match)
+                const cookieExists = document.cookie.match(regEx);
+                if (cookieExists != null) 
+                    {
+                        document.body.insertAdjacentHTML(
+                        "beforeend",
+                        '<div id="welcome">Welcome back to my website!'
+                        );
+                        document.getElementById("cookieNotice").style.display = "none";
+                    }
+                else{
+                    document.getElementById("cookieNotice").style.display = "shown";
+                }   
+            }
+
+            // Set cookie consent
+            function acceptCookieConsent(){
+                //deleteCookie('user_cookie_consent');
+                setCookie('user_cookie_consent', 1, 30);
+                document.getElementById("cookieNotice").style.display = "none";
+            }
+
+            
         </script>
+
+        <!--  ref https://fullstackheroes.com/tutorials/javascript/cookie-policy-popup/  
+        https://blog.formpl.us/how-to-create-a-simple-cookie-consent-pop-up-for-your-website-dad17a174b60-->
+        <!-- <div class="cookie-overlay" style='display: shown'<div class="cookie-overlay"
+            
+            <p>By clicking the "Accept" button below, you accept to using cookies on this site.</p>
+            <img src="/close.png" class="close-cookies" />
+            <button class="close">Accept</button>
+            
+        </div> -->
+
+        <div id="cookieNotice" style="display: shown;">
+            <div class="cookie-overlay"></div>
+                <h4>Cookie Consent</h4>
+                <p>This website uses cookies please accept to the following terms  <a style="color:#115cfa;" href="/privacy-policy">Privacy Policy</a></p>      
+                <button class="close" onclick="acceptCookieConsent();">Accept</button> 
+            </div>
+        </div>
 
         <header>
             <div class = "container">
