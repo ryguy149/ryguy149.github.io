@@ -12,7 +12,6 @@
         <link rel = "stylesheet" type="text/css" href = "css/webServer.css">
     </head>
 
-    
 
     <body>
         
@@ -73,7 +72,7 @@
                     {
                         document.body.insertAdjacentHTML(
                         "beforeend",
-                        '<div id="welcome">Welcome back to my website!'
+                        '<div id="welcome">Welcome back to my website!<button class="close" onclick="closeReturningUser();">close</button> </div> ',
                         );
                         document.getElementById("cookieNotice").style.display = "none";
                     }
@@ -87,6 +86,10 @@
                 //deleteCookie('user_cookie_consent');
                 setCookie('returningVisitor', 1, 30);
                 document.getElementById("cookieNotice").style.display = "none";
+            }
+
+            function closeReturningUser(){
+                document.getElementById("welcome").style.display = "none";
             }
 
             
