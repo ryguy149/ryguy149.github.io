@@ -17,12 +17,9 @@
     <body>
         
         <!-- refrence: https://dev.to/michaelburrows/display-a-message-to-returning-visitors-using-a-javascript-cookie-21d7 using cookies to welcome a returning user
-        https://stackoverflow.com/questions/29796169/how-to-add-jquery-code-into-html-page-->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
+        https://www.codexworld.com/cookie-consent-popup-with-javascript/-->
+        
         <script type="text/javascript"> 
-
-           
 
             // //function to make a new cookue if the one has not been made for the user.
             function setCookie(userCookieName) 
@@ -44,22 +41,6 @@
             }
 
 
-            // // Create cookie
-            // function setCookie(cname, cvalue, exdays) {
-            //     const d = new Date();
-            //     d.setTime(d.getTime() + (exdays*24*60*60*1000));
-            //     let expires = "expires="+ d.toUTCString();
-            //     document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-            // }
-
-            // // Delete cookie
-            // function deleteCookie(cname) {
-            //     const d = new Date();
-            //     d.setTime(d.getTime() + (24*60*60*1000));
-            //     let expires = "expires="+ d.toUTCString();
-            //     document.cookie = cname + "=;" + expires + ";path=/";
-            // }
-
             // Read cookie
             function getCookie(cname) {
                 let name = cname + "=";
@@ -76,7 +57,7 @@
                 }
                 return "";
             }
-           
+
             //check for retruning visitor
             document.addEventListener("DOMContentLoaded", function () 
             {
