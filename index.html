@@ -14,7 +14,6 @@
 
 
     <body>
-        
         <!-- refrence: https://dev.to/michaelburrows/display-a-message-to-returning-visitors-using-a-javascript-cookie-21d7 using cookies to welcome a returning user
         https://www.codexworld.com/cookie-consent-popup-with-javascript/-->
         
@@ -72,7 +71,7 @@
                     {
                         document.body.insertAdjacentHTML(
                         "beforeend",
-                        '<div id="welcome">Welcome back to my website!<button class="close" onclick="closeReturningUser();">close</button> </div> ',
+                        '<div id="welcome">Welcome back to my website!<button class="close" onclick="closeReturningUser();">Close</button> </div> ',
                         );
                         document.getElementById("cookieNotice").style.display = "none";
                     }
@@ -107,7 +106,7 @@
 
         <div id="cookieNotice" style="display: shown;">
             <div class="cookie-overlay"></div>
-                <h4>Cookie Consent</h4>
+                <h3>Cookie Consent</h3>
                 <p>This website uses cookies please accept to the following terms  <a style="color:#115cfa;" href="/privacy-policy">Privacy Policy</a></p>      
                 <button class="close" onclick="acceptCookieConsent();">Accept</button> 
             </div>
