@@ -65,9 +65,10 @@ function checkUserCookie(userCookieName)
     if (cookieExists != null) //if there is cookie data
         {
             //insert html to welcom the user back to my website
+            alert("Welcome again " + user);
             document.body.insertAdjacentHTML(
             "beforeend",
-            '<div id="returningUser"><h3>Welcome back to my website!</h3><button class="close" onclick="closeReturningUser();">Close</button> </div>',
+            '<div id="returningUser"><h3>Welcome back to my website! </h3><button class="close" onclick="closeReturningUser();">Close</button> </div>',
             );
             document.getElementById("cookieNotice").style.display = "none";
         }
@@ -79,7 +80,8 @@ function checkUserCookie(userCookieName)
 //Cookie consent accept function
 function acceptCookieConsent(){
     //deleteCookie('user_cookie_consent');
-    setCookie('returningVisitor', 1, 30);
+    user = prompt("Please enter your name:", "");
+    setCookie(user, 1, 30);
     document.getElementById("cookieNotice").style.display = "none"; //disable show for the cookie popus
 }
 
@@ -88,10 +90,9 @@ function declineCookieConsent(){
     document.getElementById("cookieNotice").style.display = "none"; //disable show for the cookie popus
 }
 
-
 function closeReturningUser(){
     document.getElementById("returningUser").style.display = "none";  //store that the user has been on the website before
 }
 
-            
+           
         
