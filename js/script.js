@@ -21,7 +21,7 @@ function setCookie(userCookieName)
     const userCookieDays = 7;
     let expiryDate = new Date();
     expiryDate.setDate(expiryDate.getDate() + userCookieDays);
-    document.cookie = userCookieValue + "=" + userCookieName +"; expires=" + expiryDate.toGMTString() + "path=/"; 
+    document.cookie = userCookieName + "=" + userCookieValue +"; expires=" + expiryDate.toGMTString() + "path=/"; 
 }
 
 // Delete cookie after it has been made
@@ -66,7 +66,7 @@ function checkUserCookie(userCookieName)
     if (cookieExists != null) //if there is cookie data
         {
             //insert html to welcom the user back to my website
-            let user = getCookie("username");
+            let user = getCookie("returningVisitor");
             alert("Welcome again " + user);
             document.body.insertAdjacentHTML(
             "beforeend",
