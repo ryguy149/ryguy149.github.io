@@ -21,7 +21,7 @@ function setCookie(userCookieName)
     const userCookieDays = 7;
     let expiryDate = new Date();
     expiryDate.setDate(expiryDate.getDate() + userCookieDays);
-    document.cookie = userCookieName + "=" + userCookieValue +"; expires=" + expiryDate.toGMTString() + "path=/"; 
+    document.cookie = userCookieValue + "=" + userCookieName +"; expires=" + expiryDate.toGMTString() + "path=/"; 
 }
 
 // Delete cookie after it has been made
