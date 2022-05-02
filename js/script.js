@@ -69,9 +69,9 @@ function checkUserCookie(userCookieName)
             let user = getCookie("returningVisitor");
             document.body.insertAdjacentHTML(
             "beforeend",
-            '<div id="returningUser"><h3>Welcome back to my website! </h3><button class="close" onclick="closeReturningUser();">Close</button> </div>',
+            '<div id="returningUser"><h3>Welcome back to my website <span id = "name"> </span>!</h3><button class="close" onclick="closeReturningUser();">Close</button> </div>',
             );
-            document.getElementById("returningUser").insertAdjacentElement = user;
+            document.getElementById("name").innerHTML = user;
             document.getElementById("cookieNotice").style.display = "none";
         }
     else{
