@@ -60,9 +60,10 @@ checkUserCookie(userCookieName);});
 //will welcome the user back if they have been to the website before.
 function checkUserCookie(userCookieName) 
 {
+    let user = getCookie("username");
     const regEx = new RegExp(userCookieName, "g");  //g (global match)
     const cookieExists = document.cookie.match(regEx);
-    if (cookieExists != null) //if there is cookie data
+    if (user != null) //if there is cookie data
         {
             //insert html to welcom the user back to my website
             alert("Welcome again " + user);
