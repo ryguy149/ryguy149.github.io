@@ -1,3 +1,13 @@
+ /*  Name: Ryan Fleury
+     Due Date: 5/4/2022
+     Web Server Development 
+
+     Honor Code:
+     "I have neither given nor received unauthorized aid in completing this work, nor have I presented someone else's work as my own."
+     */
+
+
+
 body{
     font: 18px/1.5 Arial,Helvetica,sans-serif;
     margin: 0;
@@ -24,8 +34,8 @@ ul{
 header{
     background: rgb(0, 0, 0);
     color: rgb(255, 255, 255);
-    padding-top: 20px;
-    min-height: 100px;
+    padding-top: 1%;
+    min-height: 50%;
     border-bottom: rgb(255, 255, 255) 4px solid;
 
     background-image: url("https://ryguy149.github.io/PicturesForWeb/uniLogo.png");
@@ -35,11 +45,12 @@ header{
     
 }
 
+/* set tge header link color and font style */
 header a{
     color:white;
     text-decoration: none; 
     text-transform: uppercase;
-    font-size: 18px;
+    font-size: 100%;
 }
 
 /* hover state for the sectoion of the site */
@@ -48,45 +59,61 @@ header a:hover{
     font-weight: bold;
 }
 
+/* set the link color and font style */
 #contactMe a{
     color:rgb(8, 27, 195);
     font-style: normal;
 }
 
 
-
+/* on hover highlight link to email to white */
 #contactMe a:hover{
     color:rgb(249, 250, 251);
     font-style: italic;
 }
 
-/* highlight my name to a light blue */
+/* highlight my name in title to a light blue */
 header .highlight, header .current a{
     color:rgb(67, 169, 253);
     font-weight: bold;
 }
 
-/* place the list item accordingly */
+/* place the list item accordingly in the header */
 header li{
     float: left;
     display: inline;
     padding: 0 18px 0 18px;
 }
 
+
+
+
+
+/* projects page section on the website */
 /* set space between list items on projectsPage*/
 #projectsPage li + li {
-    margin-top: 15px;
+    margin-top: 3%;
 }
 
+/* make list items font larger and italic */
 #projectsPage li {
     font-style: italic;
     font-size: larger;
 }
 
-
 #projectsPage sub{
-    font-size: 22px;
+    font-size: 82%;
     font-style: normal;
+}
+
+#projectsPage{
+    
+    font-size: 130%;
+
+}
+
+#projectsPage img{ 
+    border: 8px solid rgb(62, 62, 62);
 }
 
 
@@ -97,16 +124,21 @@ header #introduction{
 header #introduction h1{
     margin: 0;
 }
+
 header nav{
     float: left;
-    margin-top: 10px;
+    margin-top: 1%;
 }
+
+
 
 /* highlights the current tab in blue */
 header .highlight, header .current a{
     color:rgb(67, 169, 253);
     font-weight: bold;
 }
+
+
 
 /* personal info section for me */
 #personalInfo{
@@ -126,65 +158,61 @@ header .highlight, header .current a{
 }
 
 #personalInfo h1{
-    margin-top: 180px;
+    margin-top: 28%;
     font-size: 60px;
-    margin-bottom: 10px;
+    margin-bottom: 1%;
 
 }
 
 #personalInfo p{
-    font-size: 30px;
+    font-size: 170%;
 }
 
 
+
+
 #contactMe{
-    padding-bottom: 20px;
+    padding-bottom: 1%;
     color: rgb(0, 0, 0);
-    font-size: 30px;
+    font-size: 120%;
     
 }
 
 
 #contactMe p{
-    font-size: 23px;
+    font-size: 120%;
 }
 
 #contactMe img{
-    padding-top: 35px;
-    float: right;
+    padding-left: 20%;
+    padding-top: 3%;
+    padding-right: 13%;
+    float:right;
+    
 }
+
+
 
 
 
 #aboutMe{
     color: white;
     background: black;
-    font-size: 20px;
+    font-size: 110%;
 }
 
 
-#projectsPage{
-    
-    font-size: 23px;
-
-}
-#projectsPage img{ 
-    border: 8px solid rgb(62, 62, 62);
-}
-
-#welcome 
+#returningUser 
 {
     position: fixed;
-    bottom: 40px;
+    bottom: 2%;
     right: 1%;
     width: 18%;
-    padding: 5px 14px;
+    padding: 1% 1%;
     align-items:left;
     justify-content: space-between;
     background-color: rgb(166, 159, 159);
-    border-radius: 5px;
-    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
-
+    border-radius: 4%;
 }
 
 #welcome a 
@@ -194,17 +222,18 @@ header .highlight, header .current a{
 
 
 
+/* postion the cookie pop up in the bottom right of the screen */
 /* ref https://fullstackheroes.com/tutorials/javascript/cookie-policy-popup/ */
 #cookieNotice{
     position: fixed;
-    bottom: 40px;
+    bottom: 2%;
     right: 1%;
-    width: 18%;
-    padding: 5px 14px;
+    width: 30%;
+    padding: 1% 1%;
     align-items:left;
     justify-content: space-between;
     background-color: rgb(166, 159, 159);
-    border-radius: 5px;
+    border-radius: 4%;
     box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
 }
 
@@ -220,8 +249,8 @@ header .highlight, header .current a{
 } */
 
 footer{
-    padding: 10px;
-    margin-top: 5px;
+    padding: 1%;
+    margin-top: 1%;
     color: white;
     background-color: black;
     text-align: center;

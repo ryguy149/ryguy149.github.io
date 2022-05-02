@@ -1,3 +1,11 @@
+<!-- Name: Ryan Fleury
+     Due Date: 5/4/2022
+     Web Server Development 
+
+     Honor Code:
+     "I have neither given nor received unauthorized aid in completing this work, nor have I presented someone else's work as my own."
+    -->
+
 <!DOCTYPE html>
 <html>
     <!-- assign meta tags and assign a title for the web page -->
@@ -9,115 +17,31 @@
         <meta name = "author" content = "Ryan FLeury">
 
         <title>Ryan Fleury Web Page | Welcome</title>
+
+        <!-- Link to the external style sheet -->
         <link rel = "stylesheet" type="text/css" href = "css/webServer.css">
     </head>
 
 
     <body>
-        <!-- refrence: https://dev.to/michaelburrows/display-a-message-to-returning-visitors-using-a-javascript-cookie-21d7 using cookies to welcome a returning user
-        https://www.codexworld.com/cookie-consent-popup-with-javascript/-->
-        
-        <script type="text/javascript"> 
+        <!-- link to external javascript file -->
+        <script type="text/javascript" src="js/script.js"></script>
 
-            // //function to make a new cookue if the one has not been made for the user.
-            function setCookie(userCookieName) 
-            {
-                const userCookieValue = "Yes";
-                const userCookieDays = 7;
-                let expiryDate = new Date();
-                expiryDate.setDate(expiryDate.getDate() + userCookieDays);
-                document.cookie = userCookieName + "=" + userCookieValue +"; expires=" + expiryDate.toGMTString() + "path=/"; 
-            }
-
-            // Delete cookie
-            function deleteCookie(userCookieName) 
-            {
-                const userCookieDays = 7;
-                let expiryDate = new Date();
-                expiryDate.setDate(expiryDate.getDate() + userCookieDays);
-                document.cookie = userCookieName + "=;" + expiryDate.toGMTString() + ";path=/";
-            }
-
-
-            // Read cookie
-            function getCookie(cname) {
-                let name = cname + "=";
-                let decodedCookie = decodeURIComponent(document.cookie);
-                let ca = decodedCookie.split(';');
-                for(let i = 0; i <ca.length; i++) {
-                    let c = ca[i];
-                    while (c.charAt(0) == ' ') {
-                        c = c.substring(1);
-                    }
-                    if (c.indexOf(name) == 0) {
-                        return c.substring(name.length, c.length);
-                    }
-                }
-                return "";
-            }
-
-            //check for retruning visitor
-            document.addEventListener("DOMContentLoaded", function () 
-            {
-            const userCookieName = "returningVisitor";
-            checkUserCookie(userCookieName);});
-
-            //will welcome the user back if they have been to the website before.
-            function checkUserCookie(userCookieName) 
-            {
-                const regEx = new RegExp(userCookieName, "g");  //g (global match)
-                const cookieExists = document.cookie.match(regEx);
-                if (cookieExists != null) 
-                    {
-                        document.body.insertAdjacentHTML(
-                        "beforeend",
-                        '<div id="welcome"><h3>Welcome back to my website!</h3><button class="close" onclick="closeReturningUser();">Close</button> </div> ',
-                        );
-                        document.getElementById("cookieNotice").style.display = "none";
-                    }
-                else{
-                    document.getElementById("cookieNotice").style.display = "shown";
-                }   
-            }
-
-            // Set cookie consent
-            function acceptCookieConsent(){
-                //deleteCookie('user_cookie_consent');
-                setCookie('returningVisitor', 1, 30);
-                document.getElementById("cookieNotice").style.display = "none";
-            }
-
-            function closeReturningUser(){
-                document.getElementById("welcome").style.display = "none";
-            }
-
-            
-        </script>
-
-        <!--  ref https://fullstackheroes.com/tutorials/javascript/cookie-policy-popup/  
-        https://blog.formpl.us/how-to-create-a-simple-cookie-consent-pop-up-for-your-website-dad17a174b60-->
-        <!-- <div class="cookie-overlay" style='display: shown'<div class="cookie-overlay"
-            
-            <p>By clicking the "Accept" button below, you accept to using cookies on this site.</p>
-            <img src="/close.png" class="close-cookies" />
-            <button class="close">Accept</button>
-            
-        </div> -->
-
+        <!-- cookie consent html code. Adds pop up to bottom right -->
         <div id="cookieNotice" style="display: shown;">
             <div class="cookie-overlay"></div>
                 <h3>Cookie Consent</h3>
                 <p>This website uses cookies please accept to the following terms  <a style="color:#115cfa;" href="privacy.html">Privacy Policy</a></p>      
                 <button class="close" onclick="acceptCookieConsent();">Accept</button> 
+                <button class="close" onclick="declineCookieConsent();">Decline</button> 
             </div>
         </div>
 
+        <!-- content for the selection of tabs on the website and for the site title -->
         <header>
             <div class = "container">
                 <div id = "introduction">
-                    <!-- <img src="PicturesForWeb\uniLogo.png" width="80" height="100"> -->
                     <h1><span class="highlight">Ryan Fleury's </span> Personal Website</h1> <!--use span to ensure a new line is not created-->
-                    
                 <nav>
                     <ul>
                          <li class = current><a href="index.html">Home</a></li> 
@@ -130,7 +54,7 @@
             </div>
         </header>
     
-        <!-- label for the photo that has been placed on screen -->
+        <!-- place photo to screen and label the image accordingly -->
         <section id = "personalInfo">
             
             <div class = "container">
@@ -163,20 +87,23 @@
             </div>
         </section>
         
-        <!-- contact me section need to integrate email functionality in this section still -->
+
+        <!-- contact me section for the website -->
         <section id = "contactMe">
             <div class= "container">
                 <img src="PicturesForWeb/headshot.jpg">
                 <h1>Contact Me </h1>
                 <p>If you would like to get in contact with me please reach out! Email is the best way to reach me, but please give me adequate time to get back with you.</p>
+                
+                <!-- email link for my primary inbox -->
                 <form>
-                    <!-- <input type="email" placeholder="Enter Email">
-                    <button type="submit" class="buttone_1">Email Me!</button> -->
                     <a class="button" href="mailto:rfleury@ltu.edu">Link to my email: rfleury@ltu.edu</a>
                 </form>
+                
             </div>
         </section>
 
+        <!-- footer section for the project -->
         <section id = "footer">
             <footer>
                 <p>Web Server Project 2022</p>
