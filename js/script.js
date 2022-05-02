@@ -63,7 +63,7 @@ function checkUserCookie(userCookieName)
     let user = getCookie("username");
     const regEx = new RegExp(userCookieName, "g");  //g (global match)
     const cookieExists = document.cookie.match(regEx);
-    if (user != null) //if there is cookie data
+    if (user != "") //if there is cookie data
         {
             //insert html to welcom the user back to my website
             alert("Welcome again " + user);
