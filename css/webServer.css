@@ -78,7 +78,7 @@ header .highlight, header .current a{
 header li{
     float: left;
     display: inline;
-    padding: 0 18px 0 18px;
+    padding: 0 30px 0 30px;
 }
 
 
@@ -164,7 +164,7 @@ header .highlight, header .current a{
     font-size: 170%;
 }
 
-
+/* contactMe section on index page */
 
 #contactMe{
     padding-bottom: 1%;
@@ -186,6 +186,29 @@ header .highlight, header .current a{
     
 }
 
+/* on hover highlight link to email to white */
+#contact a:hover{
+    color:rgb(249, 250, 251);
+    font-style: italic;
+}
+
+
+/* contact section on contact me page */
+#contact{
+    padding-bottom: 1%;
+    color: rgb(0, 0, 0);
+    font-size: 120%;
+    
+    
+}
+
+#contact p{
+    font-size: 120%;
+}
+
+#contact img{
+    padding-top: 2%;
+}
 
 #aboutMe{
     color: white;
