@@ -82,7 +82,7 @@ function checkUserCookie(userCookieName)
 //Cookie consent accept function
 function acceptCookieConsent(){
     //deleteCookie('user_cookie_consent');
-    user = prompt("Please enter your name:", "");
+    user = prompt("Please enter your name for cookie consent:", "");
     setCookie(user, 1, 30);
     document.getElementById("cookieNotice").style.display = "none"; //disable show for the cookie popus
 }
