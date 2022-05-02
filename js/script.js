@@ -71,7 +71,7 @@ function checkUserCookie(userCookieName)
             "beforeend",
             '<div id="returningUser"><h3>Welcome back to my website! </h3><button class="close" onclick="closeReturningUser();">Close</button> </div>',
             );
-            document.getElementById("returningUser").innerHTML = user;
+            document.getElementById("returningUser").insertAdjacentElement = user;
             document.getElementById("cookieNotice").style.display = "none";
         }
     else{
