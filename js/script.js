@@ -17,11 +17,11 @@
 // //function to make a new cookie if the one has not been made for the user.
 function setCookie(userCookieName) 
 {
-    const userCookieValue = "Yes";
+    const userCookieValue = "returningVisitor";
     const userCookieDays = 7;
     let expiryDate = new Date();
     expiryDate.setDate(expiryDate.getDate() + userCookieDays);
-    document.cookie = userCookieName + "=" + userCookieValue +"; expires=" + expiryDate.toGMTString() + "path=/"; 
+    document.cookie = userCookieValue + "=" + userCookieName +"; expires=" + expiryDate.toGMTString() + "path=/"; 
 }
 
 // Delete cookie after it has been made
@@ -60,12 +60,13 @@ checkUserCookie(userCookieName);});
 //will welcome the user back if they have been to the website before.
 function checkUserCookie(userCookieName) 
 {
-    let user = getCookie("username");
+    
     const regEx = new RegExp(userCookieName, "g");  //g (global match)
     const cookieExists = document.cookie.match(regEx);
-    if (user != "") //if there is cookie data
+    if (cookieExists != null) //if there is cookie data
         {
             //insert html to welcom the user back to my website
+            let user = getCookie("username");
             alert("Welcome again " + user);
             document.body.insertAdjacentHTML(
             "beforeend",
