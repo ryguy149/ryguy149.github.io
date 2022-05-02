@@ -67,7 +67,7 @@ function checkUserCookie(userCookieName)
             //insert html to welcom the user back to my website
             document.body.insertAdjacentHTML(
             "beforeend",
-            '<div id="returningUser "><h3>Welcome back to my website!</h3><button class="close" onclick="closeReturningUser();">Close</button> </div> ',
+            '<div id="returningUser"><h3>Welcome back to my website!</h3><button class="close" onclick="closeReturningUser();">Close</button> </div> ',
             );
             document.getElementById("cookieNotice").style.display = "none";
         }
