@@ -194,7 +194,7 @@ header .highlight, header .current a{
 }
 
 /* sets the returning user info in the bottom right of the screen */
-#returningUse {
+#returningUser {
     position: fixed;
     bottom: 2%;
     right: 1%;
