@@ -71,6 +71,7 @@ function checkUserCookie(userCookieName)
             "beforeend",
             '<div id="returningUser"><h3>Welcome back to my website <span id = "name"> </span>!</h3><button class="close" onclick="closeReturningUser();">Close</button> </div>',
             );
+            // ref: https://stackoverflow.com/questions/30035932/how-do-i-use-this-javascript-variable-in-html#:~:text=You%20cannot%20use%20js%20variables,existing%20tags%20in%20the%20html.
             document.getElementById("name").innerHTML = user;
             document.getElementById("cookieNotice").style.display = "none";
         }
